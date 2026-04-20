@@ -8,17 +8,21 @@ const useSearch = () => {
   const [searchValue, setSearchValue] = useState(null);
   const [searchSongs, setSearchSongs] = useState([]);
   const dispatch = useDispatch();
-  console.log(searchSongs);
-
+  
+  let timer
+  
   const findSearch = (e) => {
+   clearTimeout(timer)
     const value = e.target.value;
-    setSearchValue(value);
-    const filteredSongs = songs.reduce((acc, song, idx) => {
-      if (song.title.toLowerCase().includes(value.toLowerCase())) acc.push({ ...song, songIdx: idx });
+    timer = setTimeout(() => {
+      setSearchValue(value);
+      const filteredSongs = songs.reduce((acc, song, idx) => {
+        if (song.title.toLowerCase().includes(value.toLowerCase())) acc.push({ ...song, songIdx: idx });
 
-      return acc;
-    }, []);
-    setSearchSongs(filteredSongs);
+        return acc;
+      }, []);
+      setSearchSongs(filteredSongs);
+    }, 500);
   };
 
   // dispatching searched Song function

@@ -4,9 +4,9 @@ const SearchContainer = ({ searchSongs, playSearchedSong }) => {
   return (
     <div className="absolute top-12 h-100 max-w-150 w-100 p-5 bg-black/95 border border-gray-500/20 rounded z-99 overflow-y-auto">
       {searchSongs.length > 0 ? (
-        searchSongs.map((song) => (
+        searchSongs.map((song,idx) => (
           <div
-            key={song.idx}
+            key={idx}
             onClick={() => playSearchedSong(song)}
             className="flex items-center gap-2 cursor-pointer rounded-md p-2 hover:bg-zinc-900 "
           >
