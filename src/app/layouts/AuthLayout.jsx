@@ -17,10 +17,9 @@ const AuthLayout = () => {
       <div className="z-99">
         <Toaster />
       </div>
-      <div className=" bg-black/95 h-screen w-screen text-white/95 be-vietnam  py-20   ">
+      <div className=" bg-black/95 h-screen w-screen text-white/95 be-vietnam  py-20 antialiased ">
         <Outlet />
       </div>
-      
     </>
   );
 };

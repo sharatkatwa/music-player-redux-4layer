@@ -11,6 +11,12 @@ export const AppRoutes = () => {
     {
       path: "/",
       element: <MainLayout />,
+      children:[
+        {
+          path:'',
+          element:<Home />
+        }
+      ]
     },
     {
       path: "auth",
