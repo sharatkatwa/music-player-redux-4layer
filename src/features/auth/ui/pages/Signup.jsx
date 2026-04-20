@@ -1,6 +1,6 @@
 import { AudioWaveform } from "lucide-react";
 import React from "react";
-import Input from "../components/input";
+import Input from "../components/Input";
 import useAuth from "../../hooks/useAuth";
 import { useForm } from "react-hook-form";
 
